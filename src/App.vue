@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 import router from './router';
 import HelloWorld from './components/HelloWorld.vue'
+const id = ref('1');
 
 </script>
 
@@ -11,6 +12,8 @@ import HelloWorld from './components/HelloWorld.vue'
     <router-link to="/">Home</router-link>
     |
     <router-link to="/about">About</router-link>
+    |
+    <router-link to="`/user/${id}`">User</router-link>
   </div>
   <router-view msg="Vite + Vue"></router-view>
 
